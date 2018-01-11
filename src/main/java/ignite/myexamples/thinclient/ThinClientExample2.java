@@ -21,7 +21,7 @@ public class ThinClientExample2 {
         Socket socket = new Socket();
         socket.connect(new InetSocketAddress("127.0.0.1", 10800));
         doHandshake(socket);
-        createCacheWithConfiguration(socket);
+        createCacheWithConfiguration(socket, "personCache");
         querySqlFields(socket);
     }
 
@@ -444,13 +444,13 @@ public class ThinClientExample2 {
         System.out.println("moreResults: " + moreResults);
     }
 
-    private static void createCacheWithConfiguration(Socket socket) throws IOException {
+    private static void createCacheWithConfiguration(Socket socket, String cacheName) throws IOException {
         System.out.println("OP_CACHE_GET_OR_CREATE_WITH_CONFIGURATION");
 
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
         // Message length
-        writeIntLittleEndian(22, out);
+        writeIntLittleEndian(40, out);
 
         // Op code = OP_CACHE_GET_OR_CREATE_WITH_CONFIGURATION
         writeShortLittleEndian(1054, out);
@@ -459,14 +459,25 @@ public class ThinClientExample2 {
         long reqId = 1;
         writeLongLittleEndian(reqId, out);
 
-        // CacheAtomicityMode
-        writeIntLittleEndian(0, out);
+        // Config length in bytes
+        writeIntLittleEndian(16, out);
 
-        // Backups
+        // Number of properties
+        writeShortLittleEndian(2, out);
+
+        // Backups opcode
+        writeShortLittleEndian(3, out);
+
+        // Backups: 2
         writeIntLittleEndian(2, out);
 
-        // CacheMode
-        writeIntLittleEndian(2, out);
+        // Name opcode
+        writeShortLittleEndian(0, out);
+
+        // Name:
+        writeByteLittleEndian(9, out);// string type
+        writeIntLittleEndian(cacheName.length(), out);
+        out.writeBytes(cacheName);
 
         // Read result
         DataInputStream in = new DataInputStream(socket.getInputStream());
