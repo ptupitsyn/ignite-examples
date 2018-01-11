@@ -1,13 +1,6 @@
 package ignite.myexamples.thinclient;
 
 import ignite.myexamples.model.Person;
-import org.apache.ignite.Ignite;
-import org.apache.ignite.IgniteCache;
-import org.apache.ignite.IgniteCheckedException;
-import org.apache.ignite.Ignition;
-import org.apache.ignite.cache.query.QueryCursor;
-import org.apache.ignite.cache.query.SqlFieldsQuery;
-import org.apache.ignite.cache.query.SqlQuery;
 
 import java.io.*;
 import java.net.InetSocketAddress;
@@ -23,25 +16,12 @@ import java.util.List;
 public class ThinClientExample2 {
     private static final String cacheName = "myCache";
 
-    public static void main(String[] args) throws IOException, IgniteCheckedException {
-        Ignition.setClientMode(true);
-
-        try (Ignite ignite = Ignition.start("/Users/prachig/myexamples/config/cluster-config.xml")) {
-            IgniteCache<Long, Person> cache = ignite.getOrCreateCache("personCache");
-
-            cache.query(new SqlFieldsQuery("INSERT INTO Person(_key, id, name, " +
-                    "salary) values (1, 1, 'John', '1000'), (2, 2, 'Mary', '2000')"));
-
-            QueryCursor<List<?>> cursor = cache.query(new SqlQuery( "Person",
-                    "select * from Person"));
-
-            System.out.println(cursor.getAll());
-        }
+    public static void main(String[] args) throws IOException{
 
         Socket socket = new Socket();
-        socket.connect(new InetSocketAddress("127.0.0.1", 10900));
+        socket.connect(new InetSocketAddress("127.0.0.1", 10800));
         doHandshake(socket);
-        //createCacheWithConfiguration(socket);
+        createCacheWithConfiguration(socket);
         querySqlFields(socket);
     }
 
@@ -465,15 +445,15 @@ public class ThinClientExample2 {
     }
 
     private static void createCacheWithConfiguration(Socket socket) throws IOException {
-        System.out.println("OP_CACHE_CREATE_WITH_CONFIGURATION");
+        System.out.println("OP_CACHE_GET_OR_CREATE_WITH_CONFIGURATION");
 
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
         // Message length
         writeIntLittleEndian(22, out);
 
-        // Op code = OP_CACHE_CREATE_WITH_CONFIGURATION
-        writeShortLittleEndian(1053, out);
+        // Op code = OP_CACHE_GET_OR_CREATE_WITH_CONFIGURATION
+        writeShortLittleEndian(1054, out);
 
         // Request id (can be anything)
         long reqId = 1;

@@ -1,13 +1,9 @@
 package ignite.myexamples.model;
 
-import org.apache.ignite.cache.query.annotations.QuerySqlField;
-
 public class Address {
 
-    @QuerySqlField (index = true)
     private String street;
 
-    @QuerySqlField(index = true)
     private int zip;
 
 

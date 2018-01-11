@@ -1,16 +1,11 @@
 package ignite.myexamples.model;
 
-import org.apache.ignite.cache.query.annotations.QuerySqlField;
-
 public class Person {
 
-    @QuerySqlField(index = true)
     private long id;
 
-    @QuerySqlField
     private String name;
 
-    @QuerySqlField(index = true)
     private int salary;
 
 
