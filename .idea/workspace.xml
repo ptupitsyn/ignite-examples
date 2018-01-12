@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ff02f69-95dc-46c2-bec5-441fe2b7e6d5" name="Default" comment="">
+    <list default="true" id="7ff02f69-95dc-46c2-bec5-441fe2b7e6d5" name="Default" comment="Fix SqlQuery page reading">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ignite/myexamples/thinclient/ThinClientExample2.java" afterPath="$PROJECT_DIR$/src/main/java/ignite/myexamples/thinclient/ThinClientExample2.java" />
     </list>
@@ -73,8 +73,8 @@
       <file leaf-file-name="ThinClientExample2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/thinclient/ThinClientExample2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="889" column="22" lean-forward="true" selection-start-line="889" selection-start-column="22" selection-end-line="889" selection-end-column="22" />
+            <state relative-caret-position="153">
+              <caret line="208" column="53" lean-forward="true" selection-start-line="208" selection-start-column="53" selection-end-line="208" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,6 +178,7 @@
       <find>103</find>
       <find>dos</find>
       <find>.readIn</find>
+      <find>OP_BINARY_TYPE_PUT</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -837,7 +838,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515753172610</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix SqlQuery page reading">
+      <created>1515754309596</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1515754309596</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -930,7 +938,8 @@
     <MESSAGE value="fix getOrCreateCacheWithConfiguration" />
     <MESSAGE value="wip" />
     <MESSAGE value="Fix SqlQuery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix SqlQuery" />
+    <MESSAGE value="Fix SqlQuery page reading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix SqlQuery page reading" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -953,8 +962,14 @@
           <properties />
           <option name="timeStamp" value="83" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ignite/myexamples/thinclient/ThinClientExample2.java</url>
+          <line>213</line>
+          <properties />
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="84" />
+      <option name="time" value="85" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1078,8 +1093,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/thinclient/ThinClientExample2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="889" column="22" lean-forward="true" selection-start-line="889" selection-start-column="22" selection-end-line="889" selection-end-column="22" />
+        <state relative-caret-position="153">
+          <caret line="208" column="53" lean-forward="true" selection-start-line="208" selection-start-column="53" selection-end-line="208" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

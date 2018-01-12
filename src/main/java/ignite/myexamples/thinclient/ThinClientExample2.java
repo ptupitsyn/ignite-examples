@@ -154,7 +154,9 @@ public class ThinClientExample2 {
         //cachePut(socket, 1, 11);
         //cacheGet(socket, 1);
 
-        doSQLQuery(socket);
+        //doSQLQuery(socket);
+
+        putBinaryType(socket);
     }
 
     private static void putBinaryType(Socket socket) throws  IOException {
@@ -163,7 +165,7 @@ public class ThinClientExample2 {
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
         // Request header
-        writeRequestHeader(45, OP_BINARY_TYPE_PUT, 1, out);
+        writeRequestHeader(120, OP_BINARY_TYPE_PUT, 1, out);
 
         // Type id
         writeIntLittleEndian(type.hashCode(), out);
@@ -202,13 +204,11 @@ public class ThinClientExample2 {
         writeIntLittleEndian(1, out);
 
         // Schema
-        writeIntLittleEndian(0x811C9DC5, out);
-        writeByteLittleEndian(14, out);
-        writeIntLittleEndian(3, out);
+        writeIntLittleEndian(0x811C9DC5, out);  // id
+        writeIntLittleEndian(3, out);  // field count
         writeIntLittleEndian(field1.hashCode(), out);
         writeIntLittleEndian(field2.hashCode(), out);
         writeIntLittleEndian(field3.hashCode(), out);
-
 
         // Read result
         DataInputStream in = new DataInputStream(socket.getInputStream());
