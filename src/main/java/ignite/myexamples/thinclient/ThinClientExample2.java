@@ -442,19 +442,26 @@ public class ThinClientExample2 {
         System.out.println("moreResults: " + moreResults);
     }
 
-    private static void createCacheWithConfiguration(Socket socket) throws IOException {
+    private static void getOrCreateCacheWithConfiguration(Socket socket) throws IOException {
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
-        writeRequestHeader(12, OP_CACHE_CREATE_WITH_CONFIGURATION, 1, out);
+        writeRequestHeader(40, OP_CACHE_GET_OR_CREATE_WITH_CONFIGURATION, 1, out);
 
-        // CacheAtomicityMode
-        writeIntLittleEndian(0, out);
+        // Config length in bytes
+        writeIntLittleEndian(16, out);
 
-        // Backups
+        // Number of properties
+        writeShortLittleEndian(2, out);
+
+        // Backups opcode
+        writeShortLittleEndian(3, out);
+        // Backups: 2
         writeIntLittleEndian(2, out);
 
-        // CacheMode
-        writeIntLittleEndian(2, out);
+        // Name opcode
+        writeShortLittleEndian(0, out);
+        // Name
+        writeString("personCache", out);
 
         // Read result
         DataInputStream in = new DataInputStream(socket.getInputStream());
