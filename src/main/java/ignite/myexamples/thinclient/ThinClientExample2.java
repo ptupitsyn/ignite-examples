@@ -436,7 +436,10 @@ public class ThinClientExample2 {
 
         // Read entries (as user objects)
         for (int i = 0; i < rowCount; i++){
-            // ...
+            Object key = readBinaryObject(in);
+            Object val = readBinaryObject(in);
+
+            System.out.println("CacheEntry: " + key + ", " + val);
         }
 
         boolean moreResults = readBooleanLittleEndian(in);
@@ -885,14 +888,16 @@ public class ThinClientExample2 {
             case 4:
                 return readLongLittleEndian(in);
             case 27: {
-                int len = in.readInt();
+                int len = readIntLittleEndian(in);
                 // Assume 0 offset for simplicity
                 Object res = readBinaryObject(in);
-                assert in.readInt() == 0;
+                int offset = readIntLittleEndian(in);
+                assert offset == 0;
                 return res;
             }
             case 103:
-                assert in.readByte() == 1; // version
+                byte ver = in.readByte();
+                assert ver == 1; // version
                 short flags = readShortLittleEndian(in);
                 int typeId = readIntLittleEndian(in);
                 int hash = readIntLittleEndian(in);
