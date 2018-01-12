@@ -149,9 +149,12 @@ public class ThinClientExample2 {
         Socket socket = new Socket();
         socket.connect(new InetSocketAddress("127.0.0.1", 10800));
         doHandshake(socket);
-        getOrCreateCacheWithConfiguration(socket);
-        cachePut(socket, 1, 11);
-        cacheGet(socket, 1);
+
+        //getOrCreateCacheWithConfiguration(socket);
+        //cachePut(socket, 1, 11);
+        //cacheGet(socket, 1);
+
+        doSQLQuery(socket);
     }
 
     private static void putBinaryType(Socket socket) throws  IOException {
@@ -309,13 +312,10 @@ public class ThinClientExample2 {
 
         // Read entries (as user objects)
         for (int i = 0; i < rowCount; i++) {
-            int resTypeCode1 = readByteLittleEndian(in);
-            System.out.println(readLongLittleEndian(in));
+            Object key = readBinaryObject(in);
+            Object val = readBinaryObject(in);
 
-            int resTypeCode2 = readByteLittleEndian(in);
-            System.out.println(resTypeCode2);
-
-            // read value based on resTypeCode2
+            System.out.println("CacheEntry: " + key + ", " + val);
         }
 
         boolean moreResults = readBooleanLittleEndian(in);
@@ -870,5 +870,40 @@ public class ThinClientExample2 {
         // Success
         int statusCode = readIntLittleEndian(in);
         System.out.println("success (code): " + (statusCode == 0) + " (" + statusCode + ")");
+    }
+
+    private static Object readBinaryObject(DataInputStream in) throws IOException {
+        byte code = in.readByte();
+
+        switch (code) {
+            case 1:
+                return in.readByte();
+            case 2:
+                return readShortLittleEndian(in);
+            case 3:
+                return readIntLittleEndian(in);
+            case 4:
+                return readLongLittleEndian(in);
+            case 27: {
+                int len = in.readInt();
+                // Assume 0 offset for simplicity
+                Object res = readBinaryObject(in);
+                assert in.readInt() == 0;
+                return res;
+            }
+            case 103:
+                assert in.readByte() == 1; // version
+                short flags = readShortLittleEndian(in);
+                int typeId = readIntLittleEndian(in);
+                int hash = readIntLittleEndian(in);
+                int len = readIntLittleEndian(in);
+                int schemaId = readIntLittleEndian(in);
+                int schemaOffset = readIntLittleEndian(in);
+                byte[] data = new byte[len - 24];
+                in.read(data);
+                return "Binary Object: " + typeId;
+            default:
+                throw new Error("Unsupported type: " + code);
+        }
     }
 }
