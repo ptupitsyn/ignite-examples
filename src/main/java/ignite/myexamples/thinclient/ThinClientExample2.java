@@ -869,6 +869,6 @@ public class ThinClientExample2 {
 
         // Success
         int statusCode = readIntLittleEndian(in);
-        System.out.println("status code: " + statusCode);
+        System.out.println("success (code): " + (statusCode == 0) + " (" + statusCode + ")");
     }
 }
