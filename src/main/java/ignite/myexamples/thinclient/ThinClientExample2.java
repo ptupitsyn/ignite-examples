@@ -6,7 +6,7 @@ import java.net.Socket;
 
 
 public class ThinClientExample2 {
-    private static final String cacheName = "myCache";
+    private static final String cacheName = "personCache";
 
         /* General-purpose operations. */
     /** */
@@ -147,8 +147,9 @@ public class ThinClientExample2 {
 //        }
 
         Socket socket = new Socket();
-        socket.connect(new InetSocketAddress("127.0.0.1", 10900));
+        socket.connect(new InetSocketAddress("127.0.0.1", 10800));
         doHandshake(socket);
+        getOrCreateCacheWithConfiguration(socket);
         cachePut(socket, 1, 11);
         cacheGet(socket, 1);
     }
@@ -445,7 +446,7 @@ public class ThinClientExample2 {
     private static void getOrCreateCacheWithConfiguration(Socket socket) throws IOException {
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
-        writeRequestHeader(40, OP_CACHE_GET_OR_CREATE_WITH_CONFIGURATION, 1, out);
+        writeRequestHeader(30, OP_CACHE_GET_OR_CREATE_WITH_CONFIGURATION, 1, out);
 
         // Config length in bytes
         writeIntLittleEndian(16, out);
