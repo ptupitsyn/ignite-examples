@@ -73,8 +73,8 @@
       <file leaf-file-name="ThinClientExample2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/thinclient/ThinClientExample2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="286" column="24" lean-forward="false" selection-start-line="286" selection-start-column="24" selection-end-line="286" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,20 +87,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <marker date="1515682395579" expanded="false" signature="362:373" ph=" { " />
-                <marker date="1515682395579" expanded="false" signature="383:389" ph=" }" />
-                <marker date="1515682395579" expanded="false" signature="421:432" ph=" { " />
-                <marker date="1515682395579" expanded="false" signature="445:451" ph=" }" />
-                <marker date="1515682395579" expanded="false" signature="480:491" ph=" { " />
-                <marker date="1515682395579" expanded="false" signature="503:509" ph=" }" />
-                <marker date="1515682395579" expanded="false" signature="547:558" ph=" { " />
-                <marker date="1515682395579" expanded="false" signature="575:581" ph=" }" />
-                <marker date="1515682395579" expanded="false" signature="609:620" ph=" { " />
-                <marker date="1515682395579" expanded="false" signature="634:640" ph=" }" />
-                <marker date="1515682395579" expanded="false" signature="679:690" ph=" { " />
-                <marker date="1515682395579" expanded="false" signature="711:717" ph=" }" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,7 +105,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
+            <state relative-caret-position="1326">
               <caret line="78" column="21" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
               <folding />
             </state>
@@ -148,7 +135,7 @@
       <file leaf-file-name="cluster-config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/cluster-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="340">
               <caret line="20" column="81" lean-forward="false" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
               <folding />
             </state>
@@ -291,8 +278,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -348,6 +333,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -785,7 +772,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515683227454</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix cache creation">
+      <created>1515684292066</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1515684292066</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -806,12 +800,12 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43004417" sideWeight="0.5071531" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13200796" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4312026" sideWeight="0.49284694" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4312026" sideWeight="0.49284694" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32716927" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3097015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3128998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980143" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28710726" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -873,7 +867,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Fix compilation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix compilation" />
+    <MESSAGE value="fix cache creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix cache creation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -892,7 +887,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ignite/myexamples/thinclient/ThinClientExample2.java</url>
-          <line>478</line>
+          <line>458</line>
           <properties />
           <option name="timeStamp" value="74" />
         </line-breakpoint>
@@ -934,63 +929,17 @@
     <entry file="file://$USER_HOME$/Downloads/ignite-master/modules/core/src/main/java/org/apache/ignite/internal/IgnitionEx.java" />
     <entry file="file://$USER_HOME$/Downloads/ignite-master/modules/core/src/main/java/org/apache/ignite/internal/processors/odbc/ClientListenerNioListener.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home/src.zip!/java/lang/String.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/store/PersonStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="58" column="20" lean-forward="false" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/store/PersonStore.java" />
     <entry file="jar://$USER_HOME$/Downloads/apache-ignite-fabric-2.4.0-SNAPSHOT-bin/libs/ignite-core-2.4.0-SNAPSHOT.jar!/org/apache/ignite/IgniteCache.class" />
     <entry file="jar://$USER_HOME$/Downloads/apache-ignite-fabric-2.4.0-SNAPSHOT-bin/libs/ignite-core-2.4.0-SNAPSHOT.jar!/org/apache/ignite/cache/query/SqlQuery.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/plugin/MyPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/plugin/MyPluginProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/plugin/MyPlugin.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/plugin/MyPluginProvider.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/ComputeClosureExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/plugin/MyPluginConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/plugin/MyPluginConfiguration.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/IndexExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/security/MySecurityContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/security/MySecurityCredentialsProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/security/MyGridSecurityProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/security/MySecurityContext.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/security/MySecurityCredentialsProvider.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/security/MyGridSecurityProcessor.java" />
     <entry file="file://$PROJECT_DIR$/src/ignite-type-metadata.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1009,78 +958,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/cluster-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="340">
           <caret line="20" column="81" lean-forward="false" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/store/PersonStoreExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/store/PersonStoreExample.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
+        <state relative-caret-position="1326">
           <caret line="78" column="21" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/IgniteNodeStartup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/LoggerExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/SimplePutGet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/thinclient/ThinClientExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/IgniteNodeStartup.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/LoggerExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/SimplePutGet.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/thinclient/ThinClientExample.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/model/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1515682395579" expanded="false" signature="362:373" ph=" { " />
-            <marker date="1515682395579" expanded="false" signature="383:389" ph=" }" />
-            <marker date="1515682395579" expanded="false" signature="421:432" ph=" { " />
-            <marker date="1515682395579" expanded="false" signature="445:451" ph=" }" />
-            <marker date="1515682395579" expanded="false" signature="480:491" ph=" { " />
-            <marker date="1515682395579" expanded="false" signature="503:509" ph=" }" />
-            <marker date="1515682395579" expanded="false" signature="547:558" ph=" { " />
-            <marker date="1515682395579" expanded="false" signature="575:581" ph=" }" />
-            <marker date="1515682395579" expanded="false" signature="609:620" ph=" { " />
-            <marker date="1515682395579" expanded="false" signature="634:640" ph=" }" />
-            <marker date="1515682395579" expanded="false" signature="679:690" ph=" { " />
-            <marker date="1515682395579" expanded="false" signature="711:717" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,8 +995,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ignite/myexamples/thinclient/ThinClientExample2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="286" column="24" lean-forward="false" selection-start-line="286" selection-start-column="24" selection-end-line="286" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
